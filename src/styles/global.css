@@ -20,7 +20,6 @@ body {
   width: 100%;
 }
 
-
 /* for input label animation */
 input:not(:placeholder-shown) ~ .input-custom-label {
   @apply bg-white text-davyGrey transform -translate-y-[27px] translate-x-1 scale-90 opacity-100;
