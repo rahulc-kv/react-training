@@ -12,13 +12,14 @@ const ListElements = props => {
           | &emsp; File Name: {data.fileName}&ensp;Last Sync: {data.lastSync}
         </h6>
       </div>
-      {data.isActive && (
-        <div className="flex-initial  p-1 pl-4 w-32 text-gray-700 ">
-          <RefreshIcon
-            onClick={() => handleSync(data.id)}
-            className=" w-4 h-4 cursor-pointer"></RefreshIcon>
-        </div>
-      )}
+
+      <div className="flex-initial  p-1 pl-4 w-32 text-gray-700 ">
+        <RefreshIcon
+          onClick={() => handleSync(data.id)}
+          className={`w-4 h-4 cursor-pointer ${
+            data.isActive ? 'visible' : 'invisible'
+          }`}></RefreshIcon>
+      </div>
 
       <div className="flex-initial p-1 pl-4 w-32 text-gray-700">
         <MoreIcon
