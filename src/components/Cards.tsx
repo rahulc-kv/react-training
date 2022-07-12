@@ -58,7 +58,7 @@ const Cards = () => {
     {
       id: 9,
       img: Binance,
-      Linked: false,
+      Linked: true,
       isActive: true
     },
     {
@@ -78,21 +78,23 @@ const Cards = () => {
           return (
             <div
               key={file.id}
-              className=" flex flex-col items-center w-64  bg-white rounded-xl">
-              <Img className="w-32 h-16" />
-              {file.Linked && (
-                <div>
-                  <div
-                    className="w-56 text-xs text-center text-emerald-500 no-underline 
-                    hover:underline bg-slate-100 rounded-xl">
-                    Linked via api
-                  </div>
+              className=" flex flex-col flex-nowrap items-center  w-64 h-24 bg-white rounded-xl">
+              <Img className="  w-32 h-24" />
+
+              <div>
+                <div
+                  className={`w-60  text-xs text-center text-emerald-500 no-underline 
+                    hover:underline bg-slate-100 rounded-b-md ${
+                      file.Linked ? 'visible' : 'invisible'
+                    }`}>
+                  Linked via api
                 </div>
-              )}
+              </div>
+
               {!file.isActive && (
                 <div
-                  className="w-56 text-xs text-center text-sky-700 no-underline 
-                  hover:underline bg-slate-100 rounded-xl">
+                  className=" w-60 text-xs text-center text-sky-700 no-underline 
+                  hover:underline bg-slate-100  rounded-b-md">
                   Coming soon
                 </div>
               )}
