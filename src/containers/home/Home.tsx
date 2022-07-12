@@ -1,12 +1,8 @@
 import React from 'react';
-import Lists from '@components/Lists';
+//import Lists from '@components/Lists';
 
 const HomePage = () => {
-  return (
-    <div>
-      <Lists></Lists>
-    </div>
-  );
+  return <div>Home Page</div>;
 };
 
 export default HomePage;
