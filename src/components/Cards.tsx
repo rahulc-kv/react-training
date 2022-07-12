@@ -78,7 +78,7 @@ const Cards = () => {
           return (
             <div
               key={file.id}
-              className=" flex flex-col justify-center items-center w-64  bg-white rounded-xl">
+              className=" flex flex-col items-center w-64  bg-white rounded-xl">
               <Img className="w-32 h-16" />
               {file.Linked && (
                 <div>
