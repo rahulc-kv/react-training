@@ -1,15 +1,7 @@
 import React from 'react';
 import { MoreIcon, RefreshIcon } from '@assets/icons';
 const ListElements = props => {
-  const handleClick = () => {
-    // eslint-disable-next-line no-console
-    console.log('sync button clicked');
-  };
-  const handleMore = () => {
-    // eslint-disable-next-line no-console
-    console.log('More icon clicked');
-  };
-  const { data } = props;
+  const { data, handleSync, handleMore } = props;
   const { Img } = data;
 
   return (
@@ -17,19 +9,22 @@ const ListElements = props => {
       <div className=" flex flex-initial pl-8 w-96 ">
         <Img className="w-[75.85px] h-[26px]" />
         <h6 className="pt-1 pl-6 text-sm text-gray-700">
-          | &emsp; {data.fileName}&ensp;{data.lastSync}
+          | &emsp; File Name: {data.fileName}&ensp;Last Sync: {data.lastSync}
         </h6>
       </div>
       {data.isActive && (
         <div className="flex-initial  p-1 pl-4 w-32 text-gray-700 ">
           <RefreshIcon
-            onClick={handleClick}
-            className="  w-4 h-4"></RefreshIcon>
+            onClick={() => handleSync(data.id)}
+            className=" w-4 h-4 cursor-pointer"></RefreshIcon>
         </div>
       )}
 
       <div className="flex-initial p-1 pl-4 w-32 text-gray-700">
-        <MoreIcon onClick={handleMore} className=" w-4 h-4" />
+        <MoreIcon
+          onClick={() => handleMore(data.id)}
+          className=" w-4 h-4 cursor-pointer"
+        />
       </div>
     </div>
   );
