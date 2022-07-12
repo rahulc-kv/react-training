@@ -2,10 +2,12 @@ import React from 'react';
 import { MoreIcon, RefreshIcon } from '@assets/icons';
 const ListElements = props => {
   const handleClick = () => {
-    // console.log(props);
+    // eslint-disable-next-line no-console
+    console.log('sync button clicked');
   };
   const handleMore = () => {
-    //  console.log('More icon clicked');
+    // eslint-disable-next-line no-console
+    console.log('More icon clicked');
   };
   const { data } = props;
   const { Img } = data;
@@ -19,14 +21,14 @@ const ListElements = props => {
         </h6>
       </div>
       {data.isActive && (
-        <div className="flex-initial  p-1 w-32 text-gray-700 ">
+        <div className="flex-initial  p-1 pl-4 w-32 text-gray-700 ">
           <RefreshIcon
             onClick={handleClick}
             className="  w-4 h-4"></RefreshIcon>
         </div>
       )}
 
-      <div className="flex-initial p-1 w-32 text-gray-700">
+      <div className="flex-initial p-1 pl-4 w-32 text-gray-700">
         <MoreIcon onClick={handleMore} className=" w-4 h-4" />
       </div>
     </div>

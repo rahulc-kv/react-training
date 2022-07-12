@@ -35,28 +35,28 @@ const SourceList = () => {
     {
       id: 5,
       Img: Gemini,
-      fileName: 'f4.txt',
+      fileName: 'f5.txt',
       lastSync: '12.06.2021, 11.00 am',
       isActive: false
     },
     {
       id: 6,
       Img: Gemini,
-      fileName: 'f4.txt',
+      fileName: 'f6.txt',
       lastSync: '12.06.2021, 11.00 am',
       isActive: false
     },
     {
       id: 7,
       Img: Celsius,
-      fileName: 'f4.txt',
+      fileName: 'f7.txt',
       lastSync: '12.06.2021, 11.00 am',
       isActive: false
     },
     {
       id: 8,
       Img: Binance,
-      fileName: 'f4.txt',
+      fileName: 'f8.txt',
       lastSync: '12.06.2021, 11.00 am',
       isActive: true
     }
