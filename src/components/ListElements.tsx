@@ -18,7 +18,8 @@ const ListElements = props => {
           onClick={() => handleSync(data.id)}
           className={`w-4 h-4 cursor-pointer ${
             data.isActive ? 'visible' : 'invisible'
-          }`}></RefreshIcon>
+          }`}
+        />
       </div>
 
       <div className="flex-initial p-1 pl-4 w-32 text-gray-700">

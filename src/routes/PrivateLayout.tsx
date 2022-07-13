@@ -18,7 +18,6 @@ const PrivateLayout = () => {
           />
         </Routes>
       </Suspense>
-      {/* </div> */}
     </div>
   );
 };
