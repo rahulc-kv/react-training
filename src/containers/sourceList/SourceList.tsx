@@ -1,9 +1,10 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 import { CoinBase, Celsius, Gemini, Binance, Sync, Plus } from '@assets/icons';
 import ListElements from '@components/ListElements';
 import SearchElement from '@components/SearchElement';
 import BoxElement from '@components/BoxElement';
+//import TextElement from '@components/TextElement';
 
 const SourceList = () => {
   const lists = [
@@ -65,6 +66,12 @@ const SourceList = () => {
     }
   ];
 
+  const [msg, setmsg] = useState('');
+
+  const handleSetMsg = text => {
+    setmsg(text);
+  };
+
   const handleClick = id => {
     // eslint-disable-next-line no-console
     console.log('Sync button number ' + id + ' is clicked');
@@ -96,7 +103,7 @@ const SourceList = () => {
           </button>
         </div>
         <div className="flex p-2 my-2">
-          <SearchElement></SearchElement>
+          <SearchElement handleMsg={handleSetMsg}></SearchElement>
           <div className="flex ml-8 border-l-2">
             <BoxElement text="Exchanges"></BoxElement>
             <BoxElement text="Wallets"></BoxElement>
@@ -126,6 +133,7 @@ const SourceList = () => {
           </div>
         );
       })}
+      <h1 className="p-7 text-center text-azul ">{msg}</h1>
     </div>
   );
 };
