@@ -1,11 +1,11 @@
 import React from 'react';
 
-import Buttons from '@components/Buttons';
+import SideBar from '@components/SideBar';
 
 const HomePage = () => {
   return (
     <div>
-      <Buttons></Buttons>
+      <SideBar></SideBar>
     </div>
   );
 };

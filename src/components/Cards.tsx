@@ -1,9 +1,6 @@
 import React from 'react';
 
-import { Binance } from '/home/cizil/Practise/cards/react-training/src/assets/index';
-import { Celsius } from '/home/cizil/Practise/cards/react-training/src/assets/index';
-import { Coinbase } from '/home/cizil/Practise/cards/react-training/src/assets/index';
-import { Gemini } from '/home/cizil/Practise/cards/react-training/src/assets/index';
+import { Binance, Celsius, CoinBase, Gemini } from '../assets/icons';
 
 const Cards = () => {
   const files = [
@@ -21,13 +18,13 @@ const Cards = () => {
     },
     {
       id: 3,
-      img: Coinbase,
+      img: CoinBase,
       Linked: false,
       isActive: true
     },
     {
       id: 4,
-      img: Coinbase,
+      img: CoinBase,
       Linked: false,
       isActive: true
     },
