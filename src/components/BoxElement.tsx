@@ -13,4 +13,5 @@ const BoxElement = props => {
     </div>
   );
 };
+
 export default BoxElement;

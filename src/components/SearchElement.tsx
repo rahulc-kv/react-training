@@ -12,4 +12,5 @@ const SearchElement = () => {
     </div>
   );
 };
+
 export default SearchElement;
