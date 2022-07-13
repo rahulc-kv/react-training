@@ -4,6 +4,7 @@ const routesPath = {
   HOME: '/home',
   FILES: '/files-list',
   SOURCE: '/source',
+  SOURCES: '/source-list',
   TRANSACTION: '/transaction',
   TAXREPORT: '/tax-report',
   SIGNUP: '/signup',
