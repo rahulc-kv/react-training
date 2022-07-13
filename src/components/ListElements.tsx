@@ -1,5 +1,7 @@
 import React from 'react';
+
 import { MoreIcon, RefreshIcon } from '@assets/icons';
+
 const ListElements = props => {
   const { data, handleSync, handleMore } = props;
   const { Img } = data;
@@ -31,4 +33,5 @@ const ListElements = props => {
     </div>
   );
 };
+
 export default ListElements;
