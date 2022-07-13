@@ -23,7 +23,10 @@ module.exports = {
         whiteLilac: '#F6F6F6',
         whiteSmoke: '#F3F5F7',
         warningRed: '#F55E5E',
-        mercury: '#E5E7EB'
+        mercury: '#E5E7EB',
+        slateBlue: '#5E7799',
+        azul: '#2653F1',
+        gunSmoke: '#7E818D'
       },
       animation: {
         'slide-to-left': 'slide-left 0.7s ease-in forwards',
