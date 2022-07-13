@@ -1,7 +1,9 @@
 import React from 'react';
 
-import { CoinBase, Celsius, Gemini, Binance } from '@assets/icons';
+import { CoinBase, Celsius, Gemini, Binance, Sync, Plus } from '@assets/icons';
 import ListElements from '@components/ListElements';
+import SearchElement from '@components/SearchElement';
+import BoxElement from '@components/BoxElement';
 
 const SourceList = () => {
   const lists = [
@@ -75,10 +77,43 @@ const SourceList = () => {
 
   return (
     <div className="w-full">
-      <div className="flex p-6 h-16">
-        <div className="flex-initial p-2 pl-6 w-96 text-gray-700">Source</div>
-        <div className="flex-initial p-2 w-32 text-gray-700 ">Sync</div>
-        <div className="flex-initial p-2 w-32 text-gray-700">More</div>
+      <div className="h-44 bg-white">
+        <div className="flex p-2 border-b-2">
+          <h2 className="flex-initial p-3 mt-3 ml-4 w-96 font-sans text-2xl font-semibold">
+            My Sources
+          </h2>
+          <button
+            className="flex flex-initial p-[9px] m-4 mr-1 w-48 h-[40px] text-sm leading-5
+         text-white bg-slateBlue rounded-md">
+            <Sync className="flex-initial pr-[3px] mt-[1.5px] mr-[2px]" />
+            Sync Transaction
+          </button>
+          <button
+            className="flex flex-initial p-[9px] m-4 w-[200px] h-[40px] 
+        text-sm leading-5 text-white bg-azul rounded-md">
+            <Plus className="flex-initial pr-[3px] mt-[1px] mr-[2px]" />
+            Import Transaction
+          </button>
+        </div>
+        <div className="flex p-2 my-2">
+          <SearchElement></SearchElement>
+          <div className="flex ml-8 border-l-2">
+            <BoxElement text="Exchanges"></BoxElement>
+            <BoxElement text="Wallets"></BoxElement>
+            <BoxElement text="CSV"></BoxElement>
+          </div>
+        </div>
+      </div>
+      <div className="flex p-4 h-16">
+        <div className="flex-initial p-2 pl-6 w-96 font-semibold text-gunSmoke">
+          Source
+        </div>
+        <div className="flex-initial p-2 pl-0 w-32 font-semibold text-gunSmoke">
+          Sync
+        </div>
+        <div className="flex-initial p-2 pl-0 w-32 font-semibold text-gunSmoke">
+          More
+        </div>
       </div>
       {lists.map(list => {
         return (
