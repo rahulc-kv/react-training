@@ -3,6 +3,7 @@ const routesPath = {
   DEFAULT: '/',
   HOME: '/home',
   SOURCE: '/source',
+  SOURCES: '/source-list',
   TRANSACTION: '/transaction',
   TAXREPORT: '/tax-report',
   SIGNUP: '/signup',
