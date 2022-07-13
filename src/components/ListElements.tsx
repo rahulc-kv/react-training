@@ -10,7 +10,7 @@ const ListElements = props => {
     <div className="flex p-4 pl-2 m-2  h-16 bg-white rounded-md ">
       <div className=" flex flex-initial pl-8 w-96 ">
         <Img className="w-[75.85px] h-[26px]" />
-        <h6 className="pt-1 pl-6 text-sm text-gray-700">
+        <h6 className="pt-1 pl-6 text-sm text-gunSmoke">
           | &emsp; File Name: {data.fileName}&ensp;Last Sync: {data.lastSync}
         </h6>
       </div>
