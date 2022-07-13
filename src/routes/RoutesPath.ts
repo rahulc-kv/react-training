@@ -2,6 +2,7 @@ const routesPath = {
   ALL: '*',
   DEFAULT: '/',
   HOME: '/home',
+  FILES: '/files-list',
   SOURCE: '/source',
   SOURCES: '/source-list',
   TRANSACTION: '/transaction',

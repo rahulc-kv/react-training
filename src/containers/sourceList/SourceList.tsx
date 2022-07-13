@@ -1,4 +1,5 @@
 import React from 'react';
+
 import { CoinBase, Celsius, Gemini, Binance } from '@assets/icons';
 import ListElements from '@components/ListElements';
 
@@ -61,14 +62,17 @@ const SourceList = () => {
       isActive: true
     }
   ];
+
   const handleClick = id => {
     // eslint-disable-next-line no-console
     console.log('Sync button number ' + id + ' is clicked');
   };
+
   const handleMore = id => {
     // eslint-disable-next-line no-console
     console.log('More icon number ' + id + ' is clicked');
   };
+
   return (
     <div className="w-full">
       <div className="flex p-6 h-16">
