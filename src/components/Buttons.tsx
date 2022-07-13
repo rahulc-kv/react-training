@@ -1,26 +1,30 @@
 import React from 'react';
-import { NavLink, useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 
 const Buttons = () => {
   const navigate = useNavigate();
 
-  const handleClick = () => {
+  const handleClickFiles = () => {
     navigate('/files-list');
+  };
+
+  const handleClickSource = () => {
+    navigate('/source-list');
   };
 
   return (
     <div className="flex flex-col gap-4 p-5">
       <button
-        onClick={handleClick}
+        onClick={handleClickSource}
         className="p-2 font-bold text-white bg-blue-500 hover:bg-blue-700 rounded-lg ">
-        Source List{' '}
+        Source List
       </button>
 
-      <NavLink to="/files-list">
-        <button className="p-2 font-bold text-white bg-blue-500 hover:bg-blue-700 rounded-lg">
-          Files List
-        </button>
-      </NavLink>
+      <button
+        onClick={handleClickFiles}
+        className="p-2 font-bold text-white bg-blue-500 hover:bg-blue-700 rounded-lg">
+        Files List
+      </button>
     </div>
   );
 };
