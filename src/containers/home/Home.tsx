@@ -5,7 +5,7 @@ import SideBar from '@components/SideBar';
 const HomePage = () => {
   return (
     <div>
-      <SideBar></SideBar>
+      <SideBar />
     </div>
   );
 };
