@@ -1,5 +1,6 @@
-import { Search } from '@assets/icons';
 import React from 'react';
+
+import { Search } from '@assets/icons';
 
 const SearchElement = () => {
   return (
@@ -8,7 +9,8 @@ const SearchElement = () => {
       <input
         placeholder="Search"
         className="flex-initial mb-[3px] ml-2 w-48 h-[30px] text-sm
-        leading-5 text-gray-500 bg-whiteSmoke border border-gray-100 focus:outline-none"></input>
+        leading-5 text-gray-500 bg-whiteSmoke border border-gray-100 focus:outline-none"
+      />
     </div>
   );
 };
