@@ -4,7 +4,6 @@ import { CoinBase, Celsius, Gemini, Binance, Sync, Plus } from '@assets/icons';
 import ListElements from '@components/ListElements';
 import SearchElement from '@components/SearchElement';
 import BoxElement from '@components/BoxElement';
-//import TextElement from '@components/TextElement';
 
 const SourceList = () => {
   const lists = [
@@ -66,12 +65,32 @@ const SourceList = () => {
     }
   ];
 
+  const arrays = [
+    {
+      id: '1',
+      text: 'Exchanges'
+    },
+    {
+      id: '2',
+      text: 'Wallets'
+    },
+    {
+      id: '3',
+      text: 'CSV'
+    }
+  ];
+
   const [msg, setmsg] = useState('');
 
   const handleSetMsg = text => {
     setmsg(text);
   };
 
+  const [currentId, setid] = useState(0);
+
+  const handleSetNewId = id => {
+    setid(id);
+  };
   const handleClick = id => {
     // eslint-disable-next-line no-console
     console.log('Sync button number ' + id + ' is clicked');
@@ -90,24 +109,33 @@ const SourceList = () => {
             My Sources
           </h2>
           <button
-            className="flex flex-initial p-[9px] m-4 mr-1 w-48 h-[40px] text-sm leading-5
+            className="flex flex-initial p-[9px] m-4 mr-1 w-48 h-10 text-sm leading-5
          text-white bg-slateBlue rounded-md">
             <Sync className="flex-initial pr-[3px] mt-[1.5px] mr-[2px]" />
             Sync Transaction
           </button>
           <button
-            className="flex flex-initial p-[9px] m-4 w-[200px] h-[40px] 
+            className="flex flex-initial p-[9px] m-4 w-[200px] h-10 
         text-sm leading-5 text-white bg-azul rounded-md">
             <Plus className="flex-initial pr-[3px] mt-[1px] mr-[2px]" />
             Import Transaction
           </button>
         </div>
         <div className="flex p-2 my-2">
-          <SearchElement handleMsg={handleSetMsg}></SearchElement>
+          <SearchElement handleMsg={handleSetMsg} />
           <div className="flex ml-8 border-l-2">
-            <BoxElement text="Exchanges"></BoxElement>
-            <BoxElement text="Wallets"></BoxElement>
-            <BoxElement text="CSV"></BoxElement>
+            {arrays.map(array => {
+              return (
+                <div key={array.id}>
+                  <BoxElement
+                    id={array.id}
+                    text={array.text}
+                    handleClickedId={handleSetNewId}
+                    clickedId={currentId}
+                  />
+                </div>
+              );
+            })}
           </div>
         </div>
       </div>

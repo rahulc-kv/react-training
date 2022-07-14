@@ -2,7 +2,6 @@ import React from 'react';
 import { useState } from 'react';
 
 import { Search } from '@assets/icons';
-//import TextElement from './TextElement';
 
 const SearchElement = props => {
   const [text, setText] = useState('');
