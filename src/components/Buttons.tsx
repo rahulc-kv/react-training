@@ -41,9 +41,7 @@ const Buttons = props => {
         className={`h-12 font-bold text-gray-400 
                 rounded-l shadow-md ${
                   idInFocus === 'Id1'
-                    ? 'bg-' +
-                      HomePageBgColorMapper[idInFocus] +
-                      ' text-slate-50'
+                    ? HomePageBgColorMapper[idInFocus] + ' text-slate-50'
                     : 'bg-slate-50'
                 }`}>
         Blue
@@ -54,9 +52,7 @@ const Buttons = props => {
         className={`h-12 font-bold text-gray-400 
                  rounded-l shadow-md ${
                    idInFocus === 'Id2'
-                     ? 'bg-' +
-                       HomePageBgColorMapper[idInFocus] +
-                       ' text-slate-50'
+                     ? HomePageBgColorMapper[idInFocus] + ' text-slate-50'
                      : 'bg-slate-50'
                  }`}>
         Red
@@ -67,9 +63,7 @@ const Buttons = props => {
         className={`h-12 font-bold text-gray-400 
                  rounded-l shadow-md ${
                    idInFocus === 'Id3'
-                     ? 'bg-' +
-                       HomePageBgColorMapper[idInFocus] +
-                       ' text-slate-50'
+                     ? HomePageBgColorMapper[idInFocus] + ' text-slate-50'
                      : 'bg-slate-50'
                  }`}>
         Yellow

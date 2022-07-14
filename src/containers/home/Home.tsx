@@ -10,7 +10,7 @@ const HomePage = () => {
     <div>
       <SideBar idInFocus={idInFocus} setIdInFocus={setIdInFocus} />
       <div
-        className={`w-[1850px] h-[970px] bg-${HomePageBgColorMapper[idInFocus]}`}
+        className={`w-[1850px] h-[970px] ${HomePageBgColorMapper[idInFocus]}`}
       />
     </div>
   );

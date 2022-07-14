@@ -20,7 +20,7 @@ export const TAB_BAR_ITEMS = [
 ];
 
 export const HomePageBgColorMapper = {
-  Id1: 'blue-500',
-  Id2: 'red-500',
-  Id3: 'yellow-500'
+  Id1: 'bg-blue-500',
+  Id2: 'bg-red-500',
+  Id3: 'bg-yellow-500'
 };
