@@ -1,9 +1,10 @@
 import React, { useState } from 'react';
 
-import { CoinBase, Celsius, Gemini, Binance, Sync, Plus } from '@assets/icons';
+import { CoinBase, Celsius, Gemini, Sync, Plus } from '@assets/icons';
 import ListElements from '@components/ListElements';
 import SearchElement from '@components/SearchElement';
 import BoxElement from '@components/BoxElement';
+import Timer from '@components/Timer';
 
 const SourceList = () => {
   const lists = [
@@ -41,27 +42,6 @@ const SourceList = () => {
       fileName: 'f5.txt',
       lastSync: '12.06.2021, 11.00 am',
       isActive: false
-    },
-    {
-      id: 6,
-      Img: Gemini,
-      fileName: 'f6.txt',
-      lastSync: '12.06.2021, 11.00 am',
-      isActive: false
-    },
-    {
-      id: 7,
-      Img: Celsius,
-      fileName: 'f7.txt',
-      lastSync: '12.06.2021, 11.00 am',
-      isActive: false
-    },
-    {
-      id: 8,
-      Img: Binance,
-      fileName: 'f8.txt',
-      lastSync: '12.06.2021, 11.00 am',
-      isActive: true
     }
   ];
 
@@ -81,12 +61,11 @@ const SourceList = () => {
   ];
 
   const [msg, setmsg] = useState('');
+  const [currentId, setid] = useState(0);
 
   const handleSetMsg = text => {
     setmsg(text);
   };
-
-  const [currentId, setid] = useState(0);
 
   const handleSetNewId = id => {
     setid(id);
@@ -115,7 +94,7 @@ const SourceList = () => {
             Sync Transaction
           </button>
           <button
-            className="flex flex-initial p-[9px] m-4 w-[200px] h-10 
+            className="flex flex-initial p-[9px] m-4 w-48 h-10 
         text-sm leading-5 text-white bg-azul rounded-md">
             <Plus className="flex-initial pr-[3px] mt-[1px] mr-[2px]" />
             Import Transaction
@@ -162,6 +141,7 @@ const SourceList = () => {
         );
       })}
       <h1 className="p-7 text-center text-azul ">{msg}</h1>
+      <Timer />
     </div>
   );
 };
