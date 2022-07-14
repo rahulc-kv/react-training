@@ -18,3 +18,9 @@ export const TAB_BAR_ITEMS = [
     minWidth: 'sm:min-w-[150px] min-w-[70px]'
   }
 ];
+
+export const HomePageBgColorMapper = {
+  Id1: 'blue-500',
+  Id2: 'red-500',
+  Id3: 'yellow-500'
+};

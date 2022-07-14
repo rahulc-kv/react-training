@@ -1,11 +1,17 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 import SideBar from '@components/SideBar';
+import { HomePageBgColorMapper } from './constants';
 
 const HomePage = () => {
+  const [idInFocus, setIdInFocus] = useState('');
+
   return (
     <div>
-      <SideBar />
+      <SideBar idInFocus={idInFocus} setIdInFocus={setIdInFocus} />
+      <div
+        className={`w-[1850px] h-[970px] bg-${HomePageBgColorMapper[idInFocus]}`}
+      />
     </div>
   );
 };
