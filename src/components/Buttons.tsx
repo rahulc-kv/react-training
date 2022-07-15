@@ -1,7 +1,11 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 
-const Buttons = () => {
+import { HomePageBgColorMapper } from 'containers/home/constants';
+
+const Buttons = props => {
+  const { idInFocus, setIdInFocus } = props;
+
   const navigate = useNavigate();
 
   const handleClickFiles = () => {
@@ -12,8 +16,8 @@ const Buttons = () => {
     navigate('/source-list');
   };
 
-  const handleColorChange = () => {
-    return <div></div>;
+  const handleColorChange = id => {
+    setIdInFocus(id);
   };
 
   return (
@@ -33,17 +37,36 @@ const Buttons = () => {
       </button>
 
       <button
-        onClick={handleColorChange}
-        className="h-12 font-bold text-gray-400 hover:text-blue-900 
-                bg-slate-50 hover:bg-gray-100 rounded-l shadow-md">
+        onClick={() => handleColorChange('Id1')}
+        className={`h-12 font-bold text-gray-400 
+                rounded-l shadow-md ${
+                  idInFocus === 'Id1'
+                    ? HomePageBgColorMapper[idInFocus] + ' text-slate-50'
+                    : 'bg-slate-50'
+                }`}>
         Blue
       </button>
 
       <button
-        onClick={handleColorChange}
-        className="h-12 font-bold text-gray-400 hover:text-blue-900 
-                bg-slate-50 hover:bg-gray-100 rounded-l shadow-md">
-        Indigo
+        onClick={() => handleColorChange('Id2')}
+        className={`h-12 font-bold text-gray-400 
+                 rounded-l shadow-md ${
+                   idInFocus === 'Id2'
+                     ? HomePageBgColorMapper[idInFocus] + ' text-slate-50'
+                     : 'bg-slate-50'
+                 }`}>
+        Red
+      </button>
+
+      <button
+        onClick={() => handleColorChange('Id3')}
+        className={`h-12 font-bold text-gray-400 
+                 rounded-l shadow-md ${
+                   idInFocus === 'Id3'
+                     ? HomePageBgColorMapper[idInFocus] + ' text-slate-50'
+                     : 'bg-slate-50'
+                 }`}>
+        Yellow
       </button>
     </div>
   );
