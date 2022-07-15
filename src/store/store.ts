@@ -9,6 +9,7 @@ import { useDispatch } from 'react-redux';
 
 import baseApi, { authApi } from '@services/api';
 import rootReducer from './reducers';
+import { countryApi } from '@services/countryApi';
 
 export const rtkQueryErrorLogger: Middleware = () => next => action => {
   if (
@@ -35,10 +36,11 @@ export const store = configureStore({
   reducer: {
     rootReducer,
     [baseApi.reducerPath]: baseApi.reducer,
-    [authApi.reducerPath]: authApi.reducer
+    [authApi.reducerPath]: authApi.reducer,
+    [countryApi.reducerPath]: countryApi.reducer
   },
   middleware: getDefaultMiddleware =>
-    getDefaultMiddleware().concat(middlewareGroup)
+    getDefaultMiddleware().concat(middlewareGroup) //countryApi.middleware
 });
 
 setupListeners(store.dispatch);

@@ -94,7 +94,7 @@ const SourceList = () => {
             Sync Transaction
           </button>
           <button
-            className="flex flex-initial p-[9px] m-4 w-48 h-10 
+            className="flex flex-initial p-[9px] m-4 w-52 h-10 
         text-sm leading-5 text-white bg-azul rounded-md">
             <Plus className="flex-initial pr-[3px] mt-[1px] mr-[2px]" />
             Import Transaction
